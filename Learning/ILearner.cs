@@ -1,4 +1,5 @@
-﻿using SchoolAdmin.Lookup;
+﻿using SchoolAdmin.Facilities;
+using SchoolAdmin.Lookup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace SchoolAdmin.Learning
         int RegNumber { get; }
 
         void Learn();
+        void ReceiveNewBookAlert(object source, BookEventArgs args);
     }
+}
 }

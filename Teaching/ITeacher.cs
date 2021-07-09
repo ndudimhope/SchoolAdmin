@@ -1,4 +1,5 @@
-﻿using SchoolAdmin.Learning;
+﻿using SchoolAdmin.Facilities;
+using SchoolAdmin.Learning;
 using SchoolAdmin.Lookup;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,6 @@ namespace SchoolAdmin.Teaching
         List<ILearner> Learners { get; set; }
 
         void Teach();
+        void ReceiveNewBookAlert(object source, BookEventArgs args);
     }
 }
