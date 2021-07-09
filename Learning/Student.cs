@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolAdmin.Lookup;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SchoolAdmin.Learning
 {
-    class Student
+    class Student:ILearner
     {
         private readonly int _regNumber;
         private readonly string _fullName;
-        private string _level;
+        private StudentLevel _level;
 
 
         public Student(int regNumber, string fullName)
@@ -32,7 +33,7 @@ namespace SchoolAdmin.Learning
         }
 
 
-        public string Level
+        public StudentLevel Level
         {
             get
             {

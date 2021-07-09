@@ -1,4 +1,5 @@
 ﻿using System;
+using SchoolAdmin.Learning;
 
 namespace SchoolAdmin
 {
@@ -7,6 +8,10 @@ namespace SchoolAdmin
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Student firstStudent = new Student(1001, "John Doe");
+
+            
         }
     }
 }
