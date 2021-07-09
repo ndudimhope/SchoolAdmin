@@ -3,45 +3,47 @@ using System.Collections.Generic;
 using SchoolAdmin.Facilities;
 using SchoolAdmin.Learning;
 using SchoolAdmin.Lookup;
+using SchoolAdmin.Teaching;
 
 namespace SchoolAdmin
 {
     class Program
     {
+        public static LibraryCatalogQueries libraryCatalogQueries = new LibraryCatalogQueries();
         static void Main(string[] args)
         {
             // Create a teacher instance
-            ITeacher firstTeacher = new Teacher(101, "Tunde Badmus");
+            //ITeacher firstTeacher = new Teacher(101, "Tunde Badmus");
 
-            // Create a subject instance based on the struct
-            SchoolSubject mySubject = new SchoolSubject
-            {
-                Code = 101,
-                Title = "Mathematics",
-                Category = "General"
-            };
+            //// Create a subject instance based on the struct
+            //SchoolSubject mySubject = new SchoolSubject
+            //{
+            //    Code = 101,
+            //    Title = "Mathematics",
+            //    Category = "General"
+            //};
 
-            // Assign the subject to the teacher
-            firstTeacher.Subject = mySubject;
-
-
-            // Create a generic list of type ILearner
-            List<ILearner> studentList = new List<ILearner>();
-
-            // Create a number of Student instances
-            ILearner firstStudent = new Student(1001, "Betty Turner");
-            firstStudent.Level = StudentLevel.JSS1;
+            //// Assign the subject to the teacher
+            //firstTeacher.Subject = mySubject;
 
 
-            // Create an instance of the LibraryCatalog class
-            LibraryCatalog catalog = new LibraryCatalog();
+            //// Create a generic list of type ILearner
+            //List<ILearner> studentList = new List<ILearner>();
 
-            // Subscribe the teacher and student to the BookAdded event
-            catalog.BookAdded += firstTeacher.ReceiveNewBookAlert;
-            catalog.BookAdded += firstStudent.ReceiveNewBookAlert;
+            //// Create a number of Student instances
+            //ILearner firstStudent = new Student(1001, "Betty Turner");
+            //firstStudent.Level = StudentLevel.JSS1;
 
-            // Add a book to the catalog
-            catalog.AddBook(new Book() { Title = "Things Fall Apart", Author = "Chinua Achebe" });
+
+            //// Create an instance of the LibraryCatalog class
+            //LibraryCatalog catalog = new LibraryCatalog();
+
+            //// Subscribe the teacher and student to the BookAdded event
+            //catalog.BookAdded += firstTeacher.ReceiveNewBookAlert;
+            //catalog.BookAdded += firstStudent.ReceiveNewBookAlert;
+
+            //// Add a book to the catalog
+            //catalog.AddBook(new Book() { Title = "Things Fall Apart", Author = "Chinua Achebe" });
 
 
             //ILearner secondStudent = new Student(1002, "Alison Wood");
@@ -100,9 +102,12 @@ namespace SchoolAdmin
             //    Console.WriteLine($"Key is {kvp.Key} \t Value is {kvp.Value.Name}");
             //}
 
+            //libraryCatalogQueries.GetAllBooksInAscendingOrderQuery();
+            libraryCatalogQueries.GetAllBooksInAscendingOrderAndAuthorInDescQuery();
+
         }
 
 
     }
-    }
+    
 }

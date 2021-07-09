@@ -18,4 +18,4 @@ namespace SchoolAdmin.Learning
         void ReceiveNewBookAlert(object source, BookEventArgs args);
     }
 }
-}
+

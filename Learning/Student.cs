@@ -1,4 +1,5 @@
-﻿using SchoolAdmin.Lookup;
+﻿using SchoolAdmin.Facilities;
+using SchoolAdmin.Lookup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,5 +54,9 @@ namespace SchoolAdmin.Learning
             Console.WriteLine("I am learning something interesting now.");
         }
 
+        public void ReceiveNewBookAlert(object source, BookEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
