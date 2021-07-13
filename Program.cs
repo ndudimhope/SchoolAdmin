@@ -103,7 +103,10 @@ namespace SchoolAdmin
             //}
 
             //libraryCatalogQueries.GetAllBooksInAscendingOrderQuery();
-            libraryCatalogQueries.GetAllBooksInAscendingOrderAndAuthorInDescQuery();
+            //libraryCatalogQueries.GetAllBooksInAscendingOrderAndAuthorInDescQuery();
+
+            //libraryCatalogQueries.GetAllBooksBySpecAuthor();
+            libraryCatalogQueries.GetTitleAndAuthorOfBooksConStrValue();
 
         }
 
